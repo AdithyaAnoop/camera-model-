@@ -1,0 +1,16 @@
+for k = 1:200
+  jpgFilename = sprintf('%d.jpg', k);
+  fullFileName = fullfile('HTC-1-M7\HTC-1-M7', jpgFilename);
+  i= imread(fullFileName);
+  r=size(i);
+  
+
+ for j=1:r(1)
+     for c=1:r(2)
+        g(l)=(i(j,c,1)+i(j,c,2)+i(j,c,3))/3;
+     end
+  end
+   h(k)=max(g(:));
+   
+    
+end
