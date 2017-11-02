@@ -1,0 +1,14 @@
+i=imread('1.jpg');
+[r,c,ch] = size(i);
+outputImage = i; % Initialize
+for col = 1 : c
+    for row = 1 : r
+        zc = ToErase(row,col); % channelsToZero is a 1 by 2 array
+        for ch=1:3
+            if ch~=zc
+              outputImage(row,col,ch) = 0;
+            end
+        end
+    end
+end
+outputImage
