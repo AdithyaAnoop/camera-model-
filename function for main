@@ -1,0 +1,20 @@
+function zc = ToErase(r,c)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+if mod(r,2)==0 && mod(c,2)==0
+    zc=3;
+end
+    
+if mod(r,2)~=0 && mod(c,2)==0
+    zc=2;
+end    
+if mod(r,2)==0 && mod(c,2)~=0
+    zc=2;
+end
+
+if mod(r,2)~=0 && mod(c,2)~=0
+    zc=1;
+end    
+    
+
+end
